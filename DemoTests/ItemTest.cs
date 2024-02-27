@@ -29,7 +29,7 @@ namespace DemoTests
         public void ExampleTestError()
         {
             Item i = new();
-            Assert.ThrowsException<NullReferenceException>(() => i.Name.ToLower());
+            Assert.ThrowsException<NullReferenceException>(i.Name.ToLower());
         }
     }
 }
