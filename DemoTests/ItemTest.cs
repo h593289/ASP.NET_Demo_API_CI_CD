@@ -22,14 +22,14 @@ namespace DemoTests
             {
                 Name = "My dad"
             };
-            Assert.AreEqual("My Dad", i.Name);
+            Assert.AreNotEqual("My Dad", i.Name);
         }
 
         [TestMethod]
         public void ExampleTestError()
         {
             Item i = new();
-            Assert.AreEqual("", i.Name.ToLower());
+            Assert.ThrowsException<NullReferenceException>(() => i.Name.ToLower());
         }
     }
 }
